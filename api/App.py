@@ -107,10 +107,10 @@ def predict():
         image = request.files['image'].read()
         model_name = form.get('model')
         img = Image.open(BytesIO(image))
-        print(img)
+        #print(img)
         img_array = tf.keras.preprocessing.image.img_to_array(img)
         img_array = tf.image.resize(img_array, [224, 224])  # Resize the image if needed
-        print(img)
+        #(img)
         img_array = tf.expand_dims(img_array, 0)
         if model_name == "InceptionV3":
             predictions = InceptionV3.predict(img_array)
@@ -130,11 +130,11 @@ def predict():
             'prediction': predicted_class,
             'confidence': confidence
         }
-        print(result)
+        #print(result)
         return jsonify(result)
     
     except Exception as e:
         return jsonify({'error': str(e)})
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    app.run()
