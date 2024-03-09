@@ -1,5 +1,5 @@
 Flask
 tensorflow
-Pillow --no-build-needs
+Pillow 
 flask-cors
 Werkzeug
