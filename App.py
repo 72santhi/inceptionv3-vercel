@@ -3,9 +3,7 @@ import tensorflow as tf
 import numpy as np
 from flask_cors import CORS
 from PIL import Image
-import requests
 from io import BytesIO
-import base64
 from flask import request
 
 app = Flask(__name__)
