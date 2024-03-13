@@ -1,1 +1,6 @@
-Flask==3.0.0
+Flask
+tensorflow
+Pillow 
+flask-cors
+Werkzeug
+
