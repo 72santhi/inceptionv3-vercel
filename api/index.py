@@ -98,6 +98,9 @@ labels = [
     'kamakasturi',
     'kepala'
   ]
+@app.route('/')
+def home():
+    return 'Hello, World!'
 
 @app.route('/predict', methods=['POST'])
 def predict():
